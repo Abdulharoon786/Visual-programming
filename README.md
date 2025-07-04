@@ -4,21 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Boolean_cheks
+namespace Student_Grades
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int a = 24;
-            int b = 21;
-            int c = 61;
-            bool x = a == b;
-            bool n = a < b;
-            bool m = c > b;
-            Console.WriteLine(x);
-            Console.WriteLine(n);
-            Console.WriteLine(m);
+            Console.Write("Enter marks:");
+            int marks = Convert.ToInt32(Console.ReadLine());
+            if (marks >= 70)
+                Console.WriteLine("Grade: B");
+            else if (marks >= 60)
+                Console.WriteLine("Grade: C");
+            else if (marks >= 40)
+                Console.WriteLine("Grade: D");
+            else
+                Console.WriteLine("Grade: Fail");
         }
     }
 }
