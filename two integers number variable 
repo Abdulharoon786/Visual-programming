@@ -1,0 +1,36 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int num1, num2;
+
+        Console.Write("Enter first integer: ");
+        num1 = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter second integer: ");
+        num2 = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("You entered: " + num1 + " and " + num2);
+
+        int sum = num1 + num2;
+        int product = num1 * num2;
+
+        Console.WriteLine("Sum = " + sum);
+        Console.WriteLine("Product = " + product);
+
+        if (num1 > num2)
+        {
+            Console.WriteLine(num1 + " is greater.");
+        }
+        else if (num2 > num1)
+        {
+            Console.WriteLine(num2 + " is greater.");
+        }
+        else
+        {
+            Console.WriteLine("Both numbers are equal.");
+        }
+    }
+}
