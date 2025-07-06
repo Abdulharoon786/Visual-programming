@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Welcome to the Tea Maker");
+
+        Console.Write("Enter number of cups: ");
+        int cups = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter sugar teaspoons per cup: ");
+        int sugarPerCup = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Do you want milk? (yes/no): ");
+        string milk = Console.ReadLine();
+
+        int totalSugar = cups * sugarPerCup;
+
+        Console.WriteLine("\nPreparing Tea...");
+        Console.WriteLine("Cups: " + cups);
+        Console.WriteLine("Sugar: " + totalSugar + " teaspoons");
+        Console.WriteLine("Milk: " + (milk.ToLower() == "yes" ? "Added" : "Not Added"));
+        Console.WriteLine("Tea is ready. Enjoy!");
+    }
+}
