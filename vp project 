@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    [Obsolete("This method is outdated. Use NewMethod instead.")]
+    static void OldMethod()
+    {
+        Console.WriteLine("Old Method");
+    }
+
+    static void NewMethod()
+    {
+        Console.WriteLine("New Method");
+    }
+
+    static void Main()
+    {
+        OldMethod(); // Shows warning
+        NewMethod();
+    }
+}
