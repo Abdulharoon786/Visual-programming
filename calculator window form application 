@@ -1,0 +1,45 @@
+using System;
+using System.Windows.Forms;
+
+namespace SimpleCalculator
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            double a = Convert.ToDouble(textBox1.Text);
+            double b = Convert.ToDouble(textBox2.Text);
+            lblResult.Text = "Result: " + (a + b);
+        }
+
+        private void btnSub_Click(object sender, EventArgs e)
+        {
+            double a = Convert.ToDouble(textBox1.Text);
+            double b = Convert.ToDouble(textBox2.Text);
+            lblResult.Text = "Result: " + (a - b);
+        }
+
+        private void btnMul_Click(object sender, EventArgs e)
+        {
+            double a = Convert.ToDouble(textBox1.Text);
+            double b = Convert.ToDouble(textBox2.Text);
+            lblResult.Text = "Result: " + (a * b);
+        }
+
+        private void btnDiv_Click(object sender, EventArgs e)
+        {
+            double a = Convert.ToDouble(textBox1.Text);
+            double b = Convert.ToDouble(textBox2.Text);
+
+            if (b != 0)
+                lblResult.Text = "Result: " + (a / b);
+            else
+                lblResult.Text = "Cannot divide by zero";
+        }
+    }
+}
